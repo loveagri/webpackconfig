@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+
+</head>
+<body>
+
+<!-- 
+<% for(var key in htmlWebpackPlugin.files) { %>
+<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+<% } %>
+
+<% for(var key in htmlWebpackPlugin.options) { %>
+<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
+<% } %> -->
+
+<!-- <% for(var k in htmlWebpackPlugin.files.chunks) { %>
+<% if (k !== 'main') { %>
+<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[k].entry %>"></script>
+<% } %>
+<% } %> -->
+
+<%= htmlWebpackPlugin.files.webpackManifest %>
+<img src="src/assets/bg.png" alt="">
+<div id="app"></div>
+</body>
+</html>
